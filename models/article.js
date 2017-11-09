@@ -7,7 +7,7 @@ var ArticleSchema = new Schema({
         type:String,
         required: true
     },
-    date: {
+    datePosted: {
         type: String,
         required: true
     },
