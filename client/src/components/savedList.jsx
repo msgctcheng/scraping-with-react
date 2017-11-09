@@ -4,9 +4,9 @@ class SavedList extends Component {
     render () {
         <div className="savedArticles">
             <h2> Saved Articles</h2>
-            <ol className="savedList">
+            <ul className="savedList">
                 {this.props.children}
-            </ol>
+            </ul>
         </div>
     }
 }

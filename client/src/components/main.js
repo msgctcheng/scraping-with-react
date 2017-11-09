@@ -75,33 +75,30 @@ class Main extends React.Component {
             <div className="wrapper">
                 <Search handleSubmit={this.handleSubmit} handleInputChange={this.handleInputChange} />
                 <Results>
-                    {!this.state.qArticles.length ? (<h2> No Results </h2>) :
-                        (<QueriedList>
-                            {this.state.qArticles.map((result, index) => {
-                                return (
-                                    <Queried key={result._id} title={result.headline.main} datePosted={result.pub_date} link={result.web_url} handleSave={() =>
-                                        this.handleSave(result)
-                                    }
-                                    />
-                                )
-                            })
-                            }
-                        </QueriedList>)}
+                    <QueriedList>
+                        {this.state.qArticles.map((result, index) => {
+                            return (
+                                <Queried key={result._id} title={result.headline.main} datePosted={result.pub_date} link={result.web_url} handleSave={() =>
+                                    this.handleSave(result)
+                                }
+                                />
+                            )
+                        })
+                        }
+                    </QueriedList>
                 </Results>
 
                 <SavedList>
-                        {!this.state.sArticles.length ? (<h2> NO Saved Articles </h2>): 
-                        (<QueriedList>
+         
                         {this.state.sArticles.map((result, index) => {
                             return (
                                 <Saved key={result._id} title={result.title} datePosted={result.pub_date} link={result.web_url} handleDelete={() => this.handleDelete(result)}
                                 />
                             )
                         })}
-                        </QueriedList> )}
-            </SavedList>
-      
-        </div> 
+                </SavedList>
+
+            </div>
         )
     }
 }
