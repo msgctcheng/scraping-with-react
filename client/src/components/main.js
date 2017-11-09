@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Search from "./search.jsx";
-import Results from "./results.jsx";
-import Queried from "./queried.jsx";
-import QueriedList from "./queriedList.jsx";
+import Search from "./search";
+import Results from "./results";
+import Queried from "./queried";
+import QueriedList from "./queriedList";
 import Saved from "./saved.jsx";
-import SavedList from "./savedList.jsx";
+import SavedList from "./savedList";
 import API from "../utilities/API.js";
 
 

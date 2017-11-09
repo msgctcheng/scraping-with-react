@@ -7,8 +7,9 @@ export default {
 
   queryNYT: (params) => {
   	const query = queryURL + `&q=${params.topic}` +
-  		`& begin_date=${params.beginningYear}0101&end_date=${params.endingYear}1231`;
-
+      `& begin_date=${params.beginningYear}0101&end_date=${params.endingYear}1231`;
+  
+    console.log(axios.get(query));
     return axios.get(query);
   },
 };
