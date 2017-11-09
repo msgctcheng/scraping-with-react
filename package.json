@@ -1,0 +1,29 @@
+{
+  "name": "scraping-with-react",
+  "version": "1.0.0",
+  "description": "Scraping app that uses REACT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msgctcheng/scraping-with-react.git"
+  },
+  "keywords": [
+    "Scraping",
+    "React"
+  ],
+  "author": "Chris Cheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msgctcheng/scraping-with-react/issues"
+  },
+  "homepage": "https://github.com/msgctcheng/scraping-with-react#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.0"
+  }
+}
