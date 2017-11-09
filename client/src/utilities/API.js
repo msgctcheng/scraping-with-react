@@ -5,9 +5,8 @@ const queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-k
 
 export default {
 
-  queryNYT: (params) => {
-  	const query = queryURL + `&q=${params.topic}` +
-      `& begin_date=${params.beginningYear}0101&end_date=${params.endingYear}1231`;
+  queryNYT: (quer) => {
+  	const query = queryURL + `&q=${quer}`;
   
     console.log(axios.get(query));
     return axios.get(query);

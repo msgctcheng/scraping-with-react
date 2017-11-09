@@ -5,7 +5,7 @@ class Results extends Component {
         return (
             <div className="result-wrapper">
                 <h2> Search Results: </h2>
-                <p> {this.props.children} </p>
+                <div> {this.props.children} </div>
             </div>
         )
     }

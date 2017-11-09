@@ -3,9 +3,11 @@ import React, { Component } from "react";
 class QueriedList extends Component {
     render () {
         return (
-            <ul className="queriedList">
+            <div className="query-wrapper">
+                <ul className="queriedList">
                 {this.props.children}
-            </ul>
+                </ul>
+            </div>
         )
     }
 }
