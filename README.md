@@ -1,2 +1,2 @@
-# scraping-with-react
-React app that scrapes NYT
+# NYT-react
+React app that searches NYT and uses Mongo DB
