@@ -52,27 +52,23 @@ class Main extends React.Component {
                 datePosted: art.pub_date,
                 link: art.web_url
             }).then(res => {
-                const filtered = this.state.qArticles.filter(result => {
-                    return result.web_url !== art.web_url;
-                })
-                this.setState({ qArticles: filtered });
+               
+                this.setState({ qArticles: art.web_url });
                 this.fetchSaved();
+                
             }).catch(err => console.error(err));
     }
     handleDelete = (art) => {
         axios
             .delete("/api/delete" + art._id)
             .then(res => {
-                const filtered = this.state.sArticles.filter(result => {
-                    return result._id !== art._id;
-                });
-                this.setState({ sArticles: filtered })
+                this.setState({ sArticles: art._id })
             }).catch(err => console.error(err));
     }
 
     render() {
         return (
-            <div className="wrapper">
+            <div className="main-wrapper">
                 <Search handleSubmit={this.handleSubmit} handleInputChange={this.handleInputChange} />
                 <Results>
                     <QueriedList>
