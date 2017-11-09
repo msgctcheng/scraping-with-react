@@ -13,7 +13,6 @@ class Main extends React.Component {
     state = {
         qArticles: [],
         sArticles: [],
-        searchTerm: ""
     }
 
     componentDidMount() {
