@@ -9,7 +9,7 @@ var ArticleSchema = new Schema({
     },
     datePosted: {
         type: String,
-        required: true
+        required: false
     },
     link: {
         type: String,

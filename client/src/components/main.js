@@ -12,7 +12,7 @@ import API from "../utilities/API.js";
 class Main extends React.Component {
     state = {
         qArticles: [],
-        sArticles: [],
+        sArticles: []
     }
 
     componentDidMount() {
@@ -27,8 +27,13 @@ class Main extends React.Component {
 
     queryNYT = (query) => {
         API.queryNYT(query)
-            .then(res => this.setState({ qArticles: res.data.response.docs }))
+            .then(res => {
+                this.setState({ qArticles: res.data.response.docs });
+                console.log(res);
+                console.log(this.state);
+            })
             .catch(err => console.error(err));
+            
     }
 
     handleInputChange = (event) => {
@@ -55,7 +60,7 @@ class Main extends React.Component {
                 this.setState({ qArticles: art.web_url });
                 this.fetchSaved();
                 
-            }).catch(err => console.error(err));
+            }).catch(err => console.log(err));
     }
     handleDelete = (art) => {
         axios
